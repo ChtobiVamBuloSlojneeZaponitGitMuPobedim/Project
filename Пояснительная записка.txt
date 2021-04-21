@@ -1,0 +1,41 @@
+Программа позволит вам создать аккаунт в социальной сети.
+Строение проекта:
+main.py
+папки:
+data
+  db_session.py
+  news.py
+  users.py
+db
+  blogs.db
+templates
+  base.html
+  index.html
+  login.html
+  page.html
+  register.html
+  user.html
+forms
+  user.py
+
+users.py:
+Внешние функции:
+-check_password(hashed_password, password):
+Класс:
+User(SqlAlchemyBase):
+-__repr__(self):
+-set_password(self, password):
+
+user.py:
+Класс:
+RegisterForm(FlaskForm):
+LoginForm(FlaskForm):
+NewForm(FlaskForm):
+
+news.py:
+Класс:
+News(SqlAlchemyBase):
+
+db_session.py:
+-global_init(db_file):
+-create_session() -> Session:
